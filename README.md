@@ -24,4 +24,4 @@ If previous message is found, and it does not match with previous message, it wi
 If previous message is not found, it will set a field `conflict` to `false`
 
 
-![screenshot](https://git.omise.co/siri/graylog-plugin-function-check-diff/blob/master/screenshot.png)
+![screenshot](https://github.com/omise/graylog-plugin-function-check-diff/blob/master/screenshot.png)
