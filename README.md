@@ -1,7 +1,8 @@
 # Overview
-A Graylog's plugin compare given text with message result from query.
 
-For example, you want to know that are files updated from yesterday? You may use `ls dir > dir.log` command to list all files in target directory to `out.txt` and use rsyslog to send this log file to Graylog. Then you can configure Graylog Pipeline to compare a message from `dir.log` with previous message which was collected yesterday.
+A Graylog's plugin to compare a given text with message results from a query.
+
+For example, if you want to know that are files updated from yesterday? You may use `ls dir > dir.log` command to list all files in target directory to `out.txt` and use rsyslog to send this log file to Graylog. Then you can configure Graylog Pipeline to compare a message from `dir.log` with previous message which was collected yesterday.
 
 Rule Example:
 
