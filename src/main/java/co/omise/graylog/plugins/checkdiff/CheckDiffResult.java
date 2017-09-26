@@ -31,11 +31,11 @@ public class CheckDiffResult {
    }
 
    /**
-    * Gets actualReslt.
+    * Gets actualResult.
     * 
-    * @return the actualReslt
+    * @return the actualResult
     */
-   public String getActualReslt() {
+   public String getActualResult() {
       return actualResult;
    }
 

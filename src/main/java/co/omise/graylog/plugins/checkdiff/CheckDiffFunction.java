@@ -25,6 +25,7 @@ import com.google.inject.Inject;
 
 /**
  * {@literal check_diff} function.
+ * 
  * @author KongZ
  */
 public class CheckDiffFunction implements Function<CheckDiffResult> {
@@ -53,12 +54,11 @@ public class CheckDiffFunction implements Function<CheckDiffResult> {
    public CheckDiffFunction(Searches searches) {
       this.searches = searches;
    }
-   
+
    @Override
    public Object preComputeConstantArgument(FunctionArgs functionArgs, String s, Expression expression) {
-       return expression.evaluateUnsafe(EvaluationContext.emptyContext());
+      return expression.evaluateUnsafe(EvaluationContext.emptyContext());
    }
-
 
    @Override
    public CheckDiffResult evaluate(FunctionArgs functionArgs, EvaluationContext evaluationContext) {
@@ -78,7 +78,7 @@ public class CheckDiffFunction implements Function<CheckDiffResult> {
                .range(timeRange) //
                .limit(1) //
                .offset(0) //
-               .sorting(Sorting.DEFAULT).build();
+               .sorting(new Sorting(Message.FIELD_TIMESTAMP, Sorting.Direction.DESC)).build();
          SearchResult searchResult = searches.search(searchesConfig);
          if (searchResult.getTotalResults() > 0) {
             ResultMessage resultMessage = searchResult.getResults().get(0);

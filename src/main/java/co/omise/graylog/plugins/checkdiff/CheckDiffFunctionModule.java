@@ -27,15 +27,15 @@ public class CheckDiffFunctionModule extends PluginModule {
       addMessageProcessorFunction(binder(), name, functionClass);
    }
 
-   public static MapBinder<String, Function<?>> processorFunctionBinder(Binder binder) {
-      return MapBinder.newMapBinder(binder, TypeLiteral.get(String.class), new TypeLiteral<Function<?>>() {
-      });
-   }
-
    public static void addMessageProcessorFunction(Binder binder, String name,
          Class<? extends Function<?>> functionClass) {
       processorFunctionBinder(binder).addBinding(name).to(functionClass);
 
+   }
+
+   public static MapBinder<String, Function<?>> processorFunctionBinder(Binder binder) {
+      return MapBinder.newMapBinder(binder, TypeLiteral.get(String.class), new TypeLiteral<Function<?>>() {
+      });
    }
 
 }

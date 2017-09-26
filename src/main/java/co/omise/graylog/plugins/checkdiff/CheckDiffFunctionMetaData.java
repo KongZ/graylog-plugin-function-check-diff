@@ -23,7 +23,7 @@ public class CheckDiffFunctionMetaData implements PluginMetaData {
 
    @Override
    public String getAuthor() {
-      return "Siri Chongasamethaworn <siri@omise.co>";
+      return "Omise";
    }
 
    @Override
