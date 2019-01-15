@@ -28,7 +28,7 @@ public class CheckDiffFunctionMetaData implements PluginMetaData {
 
    @Override
    public URI getURL() {
-      return URI.create("https://github.com/omise/graylog-plugin-check-diff");
+      return URI.create("https://github.com/omise/graylog-plugin-function-check-diff");
    }
 
    @Override
